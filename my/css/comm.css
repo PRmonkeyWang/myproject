@@ -1,0 +1,113 @@
+				*{margin:0;padding:0;}
+				body{font-size:12px;font-family:"微软雅黑","宋体",Arial, Helvetica, sans-serif;color:#666}
+				ul{list-style:none;}
+				a{text-decoration: none;color:#666;text-align:center;}
+					a:hover{color:darkred;box-sizing: border-box;}
+					
+					
+				@font-face {font-family: "my";
+          src: url('../font/iconfont.eot'); /* IE9*/
+          src: url('../font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+          url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+          url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+
+        .iconfont {
+          font-family:"iconfont" !important;
+          font-size:16px;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
+				/******************************header*/
+				header{width:100%;margin-top:20px;}
+					#header_top{width:100%;background:#f0f0f0;}
+					#header_top a:hover{background:#fff;border:1px solid #ccc;line-height:33px;border-bottom:none;}
+						/***********************************..top*/
+						#header_top .top{width:1190px;height:35px;line-height:35px;margin:0 auto;font-family:my;}
+							#header_top .top .left{width:25%;float:left;}
+								#header_top .top .left a,span{display:inline-block;}
+								#header_top .top .left a:nth-of-type(1){width:35px;}
+								#header_top .top .left a:nth-of-type(2){width:60px;}
+
+							#header_top .top .right{width:30%;float:right;}
+								#header_top .top .right a,b,span{float:left;}
+								#header_top .top .right span{margin-right:5px;font-size:15px;color:darkred;}
+								#header_top .top .right a{padding:0 10px;position:relative;height:35px;}
+								#header_top .top .right a ul{position:absolute;z-index: 1;}
+								#header_top .top .right a:hover{padding:0 9px;}
+								#header_top .top .right a ul{display:none;}
+								#header_top .top .right a:hover ul{display:block;left:0;border:1px solid #ccc;background:#fff;;}
+								#header_top .top .right a:hover ul img{float:left;padding:10px;}
+								#header_top .top .right a:nth-of-type(2):hover ul li{padding:0 5px;color:#666;left:0;}
+								#header_top .top .right a:nth-of-type(2):hover ul li:hover{color:darkred}
+						/**********************************..nav*/
+						#nav{padding:32px;width:1190px;height:70px;margin:0 auto;}
+						
+						#nav div{float:left;}
+							#nav .left1{width:190px;height:70px;background:url(../img/logo.png) no-repeat center top;}
+							#nav .left2{width:170px;height:40px;border-left:2px solid silver;margin-top:10px;padding:0 10px;}
+								#nav .left2 p{font:14px/20px "黑体";color:#999;}
+								#nav .left2 span{font:14px/20px "黑体";color:silver}
+							#nav .right1{width:300px;height:60px;margin-top:10px;}
+								#nav .right1 .top{width:100%;height:40px;border:2px solid #ccc;box-sizing: border-box;}
+									#nav .right1 .top select{width:50px;height:35px;float:left;border:0;}
+									#nav .right1 .top input{width:200px;height:25px;float:left;border:0;margin:0 5px 0 5px;}
+									#nav .right1 .top a img{width:25px;height:25px;float:left;margin-top:5px;}
+									
+								#nav .right1 .bottom{width:100%;height:20px;line-height:25px}
+									#nav .right1 .bottom b{float:left;padding:0 5px;color:#333;}
+									#nav .right1 .bottom a{float:left;padding:0 5px;}
+								
+							#nav .right2{width:450px;height:25px;margin-left:40px;margin-top:20px;}
+								#nav .right2 a{float:left;width:90px;height:25px;font:17px/25px "黑体"}
+								#nav .right2 a:hover{background:darkred;color:#fff;line-height:23px;}
+								#nav .right2 span{float:left;width:25px;height:25px;background-image:url(../img/time_icon1.png);background-position:0 0;}
+								#nav .right2 a:hover span{background-image:url(../img/time_icon2.png)}
+						/*****************************..menu*/
+					#menu{width:100%;background:#f0f0f0;border-bottom:2px solid darkred;}
+						#menu .menu{width:1190px;height:40px;margin:0 auto;position:relative;background:#a90000}
+							#menu .menu i{position:absolute;top:40px;width:24px;height:15px;background:url(../img/icon_01.png) -170px -6px;}		
+							#menu .menu b{font:18px/40px "microsoft yahei";color:#fff;margin-left:20px;}
+							#menu .menu em{font:12px/40px "microsoft yahei";color:rosybrown;margin-left:10px;}
+				
+				/******************************section*/
+				section{min-height:200px;height:auto!important;height:200px;background:#FFFACD;}
+				/******************************footer*/
+				footer{width:100%;height:425px;}
+				
+					#footer_top{width:100%;height:76px;background:darkred;overflow:hidden;}
+						#footer_top .top{width:1190px;height:36px;margin:20px auto;}
+							#footer_top .top span{float:left;width:150px;height:36px;margin-left:120px;}
+							#footer_top .top span:nth-of-type(1){width:120px;}
+								#footer_top .top span i{width:36px;height:36px;float:left;background-image:url(../img/footnav_icon.png);}
+								#footer_top .top span a{font:15px/36px "microsoft yahei";color:#fff;margin-left:10px;}
+								#footer_top .top span a:hover{text-decoration: underline;}
+								
+					#footer_bottom{width:100%;margin-top:12px;}
+						#footer_bottom .bottom{width:1190px;height:337px;margin:0 auto;}
+							#footer_bottom .bottom .a{height:170px}
+								#footer_bottom .bottom .a ul{float:left;width:150px;margin-left:70px;}
+									#footer_bottom .bottom .a ul li{font:13px/25px "microsoft yahei"}
+									#footer_bottom .bottom .a ul li:first-child{font:15px/30px "microsoft yahei";font-weight:bold;}
+									#footer_bottom .bottom .a ul li:first-child a{color:#000;}
+									
+									#footer_bottom .bottom .a ul:nth-of-type(5){cursor: pointer;}
+									#footer_bottom .bottom .a ul:nth-of-type(5) img{width:100px;height:100px;}
+									#footer_bottom .bottom .a ul:nth-of-type(5) li:nth-child(3){border:1px solid #999;width:100px;padding:0 5px;box-sizing: border-box;}
+									#footer_bottom .bottom .a ul:nth-of-type(5) li:nth-child(3) span{float:right;width:25px;height:26px;background:url(../img/icon_01.png) -240px 0}
+									#footer_bottom .bottom .a ul:nth-of-type(5) li:nth-child(3):hover{color:darkred}
+									
+							#footer_bottom .bottom .b{height:40px;border-top:1px solid #999;border-bottom:1px solid #999;font:12px/40px "microsoft yahei";text-align:center;}
+							#footer_bottom .bottom .c{height:50px;text-align:center;line-height:50px;}
+								#footer_bottom .bottom .c a{color:#999;padding:0 5px;}
+								#footer_bottom .bottom .c a:hover{color:darkred;box-sizing: border-box;}
+							#footer_bottom .bottom .d{height:50px;}
+							#footer_bottom .bottom .d div{height:50px;float:left;margin-left:10px;background-image:url(../img/footrenzheng.png)}
+								#footer_bottom .bottom .d .d1{width:128px;background-position:-4px -2px}
+								#footer_bottom .bottom .d .d2{width:156px;background-position:-136px -2px}
+								#footer_bottom .bottom .d .d3{width:102px;background-position:-296px -2px}
+								#footer_bottom .bottom .d .d4{width:153px;background-position:-403px -2px}
