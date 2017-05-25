@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 			<link rel="stylesheet" type="text/css" href="css/comm.css">
+			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 			<style>
 				header{margin-top:0;}
 				#menu .menu a{display:inline-block;width:100px;height:30px;background:#870000; ;margin-top:5px;font:14px/30px "microsoft yahei";color:#fff;padding:0 5px;box-sizing: border-box;text-align:left;margin-left:60px;position:relative;}
@@ -11,7 +12,7 @@
 				/****************************************section*/
 				section{width:100%;background:#FFFACD;padding:20px 0 10px 0;}
 					#con{width:1190px;min-height:200px;height:auto!important;height:200px;border:1px solid #ccc;margin:0 auto;overflow:hidden;}
-						#con .left{width:455px;height:500px;float:left;padding:15px 30px;box-sizing: border-box;}
+						#con .left{width:550px;height:500px;float:left;padding:15px 30px;box-sizing: border-box;}
 							#con .left h1{font:25px/40px "microsoft yahei";font-weight:bold;}
 								#con .left h1 em{font:13px/60px "microsoft yahei";}
 								#con .left h1 em a{text-decoration: underline;color:red}
@@ -112,18 +113,15 @@
 					<h1>欢迎加入嗨购帮 <em>如果您已有嗨购帮账号，<a href="login.html">立即登录</a></em></h1>
 					<form>
 					<ul>
-						<li><p>用户名 :</p> <input type="username" name="username"><i>*</i></li>
-						<li><p>email :</p> <input type="text" name="email"><i>*</i></li>
-						<li><p>密码 : </p> <input type="password" name="password"><i>*</i></li>
+						<li><p>用户名 :</p> <input type="username" name="username" id="un" placeholder="例如:王七哥"><i>*</i></li>
+						<li><p>email :</p> <input type="text" name="email" id="el" placeholder="例如:11111@qq.com"><i>*</i></li>
+						<li><p>密码 : </p> <input type="password" name="password" id="pw1"><i>*</i></li>
 						<li><p>密码强度 : </p> <ol><div>弱</div><div>中</div><div>强</div></ol></li>
-						<li><p>确认密码 : </p> <input type="password" name="password"><i>*</i></li>
-						<li><p></p> <input type="checkbox">我已看过并接受</li>
-						<li><p></p> <input style="background:darkred;color:#fff;border:0;border-radius:2px;cursor: pointer;" type="button" value="同意一下协议并注册"></li>
-						<li><a href="#">我已有账号，我要登录</a><a href="#">您忘记密码了吗？</a></li>
+						<li><p>确认密码 : </p> <input type="password" name="password" id="pw2"><i>*</i></li>
+						<li><p></p> <input type="checkbox" checked="" id="cb">我已看过并接受</li>
+						<li><p></p> <input style="background:darkred;letter-spacing:3px;color:#fff;border:0;border-radius:2px;cursor: pointer;" type="button" id="btn" value="同意协议并注册"></li>
+						<li><a href="login.html">我已有账号，我要登录</a><a href="#">您忘记密码了吗？</a></li>
 					</ul>
-					
-					
-					
 					</form>
 				</div>
 				<div class="right"></div>
@@ -206,5 +204,100 @@
 				</div>
 			</div>
 		</footer>
+		<script type="text/javascript">
+			$(function(){
+				$("#un,#el").blur(function(){
+					//***************************************冗余代码
+					$("#un").parent().find("i").html("*");
+					$("#el").parent().find("i").html("*");
+					$("#pw1").parent().find("i").html("*");
+					$("#pw2").parent().find("i").html("*");
+					
+					var reg1=/[\u4e00-\u9fa5]/;
+					var reg2=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+					
+					if($("#un").val()==""){
+							
+//								var reg=/^(\d{4})(\D{5})$/;
+//								var val=oZh.value;
+//								if(reg.test(val)){
+//									console.log("正确");
+//								}else{
+//									console.log("不正确");
+//								}
+							
+						$("#un").parent().find("i").html("-用户名不能为空");
+						return;
+					}else if(!reg1.test($("#un").val())){
+						$("#un").parent().find("i").html("-用户名格式错误");
+						return;
+					}
+					
+					
+					if($("#el").val()==""){
+						$("#el").parent().find("i").html("-邮箱不能为空");
+						return;
+					}else if(!reg2.test($("#el").val())){
+						$("#el").parent().find("i").html("-邮箱格式错误");
+						return;
+					}
+					
+					
+					if($("#pw1").val()==""){
+						$("#pw1").parent().find("i").html("-密码不能为空");
+						return;
+					}
+					if($("#pw1").val()!=$("#pw2").val()){
+						$("#pw2").parent().find("i").html("-两次密码不一致");
+						return;
+					}
+					//************************************************
+				})
+				
+				$("#btn").click(function(){
+					$("#un").parent().find("i").html("*");
+					$("#el").parent().find("i").html("*");
+					$("#pw1").parent().find("i").html("*");
+					$("#pw2").parent().find("i").html("*");
+					
+					if($("#un").val()==""){
+						$("#un").parent().find("i").html("-用户名不能为空");
+						return;
+					}
+					if($("#el").val()==""){
+						$("#el").parent().find("i").html("-邮箱不能为空");
+						return;
+					}
+					if($("#pw1").val()==""){
+						$("#pw1").parent().find("i").html("-密码不能为空");
+						return;
+					}
+					if($("#pw1").val()!=$("#pw2").val()){
+						$("#pw2").parent().find("i").html("-两次密码不一致");
+						return;
+					}
+					
+//					console.log($("#un").val());
+					$.post("http://127.0.0.1/stage333/Hgou_my/regist.php",{"username":$("#un").val(),"password":$("#pw1").val(),"email":$("#el").val()},function(data){
+//						data=eval(data);
+
+//						console.log($("#con .left ul li:nth-of-type(6)").find("input").attr("checked"))
+//						console.log($("#cb").attr("checked"))
+						if(data==0){
+							
+							alert("注册成功!");
+
+							location.href="login.html";
+							
+						}else if(data==1){
+							$("#un").parent().find("i").html("-该用户名已被使用");
+						}else if(data==2){
+							$("#el").parent().find("i").html("-该邮箱已被使用");
+						}
+					})
+				})
+				
+			})
+		</script>
 	</body>
 </html>

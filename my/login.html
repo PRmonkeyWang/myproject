@@ -4,31 +4,33 @@
 		<meta charset="UTF-8">
 		<title></title>
 			<link rel="stylesheet" type="text/css" href="css/comm.css">
-			<style>
+			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<style>
 				header{margin-top:0;}
 				#menu .menu a{display:inline-block;width:100px;height:30px;background:#870000; ;margin-top:5px;font:14px/30px "microsoft yahei";color:#fff;padding:0 5px;box-sizing: border-box;text-align:left;margin-left:60px;position:relative;}
 					#menu .menu a strong{border-width:10px;border-color:#fff transparent transparent;border-style:solid;position:absolute;right:8px;top:10px;}
 				/****************************************section*/
 				section{width:100%;background:#FFFACD;padding:20px 0 10px 0;}
 					#con{width:1190px;min-height:200px;height:auto!important;height:200px;border:1px solid #ccc;margin:0 auto;overflow:hidden;}
-						#con .left{width:455px;height:500px;float:left;padding:15px 30px;box-sizing: border-box;}
+						#con .left{width:455px;min-height:300px;height:auto!important;height:300px;padding-bottom:150px;float:left;padding:15px 30px;box-sizing: border-box;}
 							#con .left h1{font:25px/40px "microsoft yahei";font-weight:bold;}
 								#con .left h1 em{font:13px/60px "microsoft yahei";}
 								#con .left h1 em a{text-decoration: underline;color:red}
 							#con .left ul li{padding-left:30px;box-sizing: border-box;margin-top:20px;}
 								#con .left ul li input{width:200px;height:30px;border:0;box-shadow: 2px 2px 2px #CCCCCC inset ;}
 								#con .left ul li input[type="checkbox"]{width:15px;height:15px;}
+								#con .left ul li input[type="text"]{width:100px;height:30px;}
+								
 								#con .left ul li i{margin-left:10px;color:red;}
 								#con .left ul li a{color:red;margin-left:20px;}
 									#con .left ul li a:hover{color:darkred}
-								#con .left ul li a:nth-child(1){margin-left:50px;}
 								
 								#con .left ul li ol{width:180px;height:30px;display:inline-block;}
 									#con .left ul li ol div{width:60px;height:30px;float:left;text-align:center;border-bottom:2px solid #999;}
 							#con .left form p{width:70px;display:inline-block;text-align:right;font-size:15px;}
 							
 					
-						#con .right{width:600px;height:500px;float:right;background:url(img/hgou.jpg) no-repeat center 85px;}
+						#con .right{width:600px;min-height:300px;height:auto!important;height:300px;padding-bottom:150px;float:right;background:url(img/hgou.jpg) no-repeat center 55px;}
 			</style>
 	</head>
 	<body>
@@ -109,21 +111,17 @@
 		<section>
 			<div id="con">
 				<div class="left">
-					<h1>欢迎加入嗨购帮 <em>如果您已有嗨购帮账号，<a href="login.html">立即登录</a></em></h1>
+					<h1>欢迎您，请登录 <em>还没有嗨购帮账户？<a href="regist.html">立即注册</a></em></h1>
 					<form>
 					<ul>
-						<li><p>用户名 :</p> <input type="username" name="username"><i>*</i></li>
-						<li><p>email :</p> <input type="text" name="email"><i>*</i></li>
-						<li><p>密码 : </p> <input type="password" name="password"><i>*</i></li>
-						<li><p>密码强度 : </p> <ol><div>弱</div><div>中</div><div>强</div></ol></li>
-						<li><p>确认密码 : </p> <input type="password" name="password"><i>*</i></li>
-						<li><p></p> <input type="checkbox">我已看过并接受</li>
-						<li><p></p> <input style="background:darkred;color:#fff;border:0;border-radius:2px;cursor: pointer;" type="button" value="同意一下协议并注册"></li>
-						<li><a href="#">我已有账号，我要登录</a><a href="#">您忘记密码了吗？</a></li>
+						<li><p>用户名 :</p> <input type="username" name="username" id="un"><i>*</i></li>
+						<li><p>密码 : </p> <input type="password" name="password" id="pw"><i>*</i></li>
+						<li><p>验证码 :</p> <input type="text" name="code" id="cd"><i><img style="vertical-align: middle;" src="img/code/captcha (1).png"></i></li>
+						
+						<li><p></p> <input type="checkbox">请保存我这次的登录信息</li>
+						<li><p></p> <input style="width:80px;margin:10px 0;background:darkred;color:#fff;border:0;border-radius:2px;cursor: pointer;" type="button" id="btn" value="登录"></li>
+						<li><p></p><a href="#">密码问题找回密码</a><a href="#">注册邮件找回密码</a></li>
 					</ul>
-					
-					
-					
 					</form>
 				</div>
 				<div class="right"></div>
@@ -206,5 +204,38 @@
 				</div>
 			</div>
 		</footer>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					$.post("http://127.0.0.1/stage333/Hgou_my/login.php",{"username":$("#un").val(),"password":$("#pw").val()},function(data){
+						data=eval(data);
+//						console.log($("#un").val());
+						
+						for(var i=0;i<data.length;i++){
+//							console.log(data[0].username)
+							if($("#un").val()==data[i].username&&$("#pw").val()==data[i].password&&$("#cd").val()=="3JC8"){
+								location.href="sy.html";
+								return;
+							}
+							if($("#un").val()!=data[i].username){
+								if(i<data.length-1){
+									continue;
+								}else{
+									alert("用户名不存在！");
+								}
+							}else if($("#pw").val()!=data[i].password){
+								alert("密码错误！");
+								$("#pw")[0].value="";
+								return;
+							}else if($("#cd").val()!="3JC8"){
+								alert("验证码不正确！");
+								return;
+							}
+						}
+						
+					})
+				})
+			})
+		</script>
 	</body>
 </html>
