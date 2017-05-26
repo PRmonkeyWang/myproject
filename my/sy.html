@@ -4,6 +4,32 @@
 		<meta charset="UTF-8">
 		<title></title>
 			<link rel="stylesheet" type="text/css" href="css/comm.css">
+			<script type="text/javascript" src="js/common.js"></script>
+			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+			<style>
+				
+				section{width:100%;padding:10px 0;}
+				/*************************************************banner图*/
+					#banner{width:1190px;height:300px;margin:0 auto;position:relative;}
+						#banner .pic{width:1010px;height:300px;overflow:hidden;position:absolute;right:0;}
+
+						#banner .pic ul li{width:1010px;height:300px;position:relative;overflow:hidden;}
+						#banner .img1{position:absolute;left:-1010px;top:0px;width:1010px;height:300px;}
+						#banner .img2{position:absolute;left:-20px;top:0px;display:none;width:1010px;height:300px;opacity:.9}
+
+					/*按钮区域*/
+						#banner .nav ul li{border:1px solid white;width:15px;height:15px;float:left;margin-left:5px;}
+						#banner .nav{width:125px;height:30px;position:absolute;right:10px;bottom:10px;}
+						#banner .select{background-color:white;}
+					aside{width:150px;height:300px;position:absolute;left:0;border:1px solid darkred;}
+						aside ul li{width:150px;height:33px;border-bottom:1px solid #CCCCCC;box-sizing: border-box;position:relative;}
+						aside ul li:last-child{border-bottom:0;}
+							aside ul li a{font:13px/31px "microsoft yahei";position:absolute;left:0;}
+							aside ul li p{float:left;}
+							aside ul li b{float:right;border:1px solid darkred}
+							aside ul li span{background-image:url(img/menu_icon.png);float:left;width:30px;height:31px;padding:0 10px;box-sizing: border-box;margin-left:10px;}
+			</style>
+			
 	</head>
 	<body>
 		<!------------------------------------header-->
@@ -12,8 +38,10 @@
 				<div class="top">
 					<div class="left">
 						<span>欢迎光临本站!</span>
-						<a href="login.html">登录</a>
+						<a style="display:none;cursor: pointer;" class="user1"></a>
+						<a href="login.html" class="user2">登录</a>
 						<a href="regist.html">免费注册</a>
+						<a class="drop">退出</a>
 					</div>
 					<div class="right">
 						<a><span>&#xe625;</span>手机版
@@ -79,7 +107,53 @@
 		</header>
 		
 		<!------------------------------------section-->
-		<section></section>
+		<section>
+			<div id="banner">
+				<div class="pic">
+				<ul>
+					
+					<li style="background:url(img/banner/1.jpg) center top/cover;">
+						<img class="img1" src="img/banner/text2.png"/>
+						<img class="img2" src="img/banner/con2.png"/>
+					</li>
+					<li style="background:url(img/banner/2.jpg) center top/cover;">
+						<img class="img1" src="img/banner/text3.png"/>
+						<img class="img2" src="img/banner/con3.png"/>
+					</li>
+					<li style="background:url(img/banner/3.jpg) center top/cover;">
+						<img class="img1" src="img/banner/text4.png"/>
+						<img class="img2" src="img/banner/con4.png"/>
+					</li>
+					<li style="background:url(img/banner/4.jpg) center top/cover;">
+						<img class="img1" src="img/banner/text5.png"/>
+						<img class="img2" src="img/banner/con5.png"/>
+					</li>
+				</ul>
+				</div>
+				<div class="nav">
+				<ul>
+					<li class="select"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+				<aside>
+					<ul>
+						<li><a href="#"><span style="background-position-y:-35px"></span><p>母婴用品</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-69px"></span><p>美容个护</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-103px"></span><p>营养保健</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-136px"></span><p>服饰鞋帽</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-170px"></span><p>箱包手袋</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-201px"></span><p>食品饮料</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-235px"></span><p>居家日用</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:0px"></span><p>运动户外</p><b>></b></a></li>
+						<li><a href="#"><span style="background-position-y:-297px"></span><p>全部分类与品牌</p><b></b></a></li>
+					</ul> 
+				</aside>
+			</div>
+		</section>
 		
 		<!------------------------------------footer-->
 		<footer>
@@ -157,30 +231,72 @@
 				</div>
 			</div>
 		</footer>
+		<script type="text/javascript">
+			var str1=getCookie("username");
+			var str2=decodeURI(str1);
+//			console.log(str2);
+			str1?foo1():foo2()
+			//--------------------------------------foo1
+			function foo1(){
+				$(function(){
+					//---------------------------------------------------------head变化
+					$("#header_top .top .left span").html("您好，欢迎您回来！")
+					$("#header_top .top .left .user1").html(str2);
+					
+					$("#header_top .top .left .user1").css({"font-weight":"bold","font-style":"italic"});
+					$("#header_top .top .left .user2").css("display","none");
+					$("#header_top .top .left .user1").css("display","inline-block");
+					
+					$("#header_top .top .left .user1").click(function(){
+						setTimeout(function(){location.href="usercenter.html"},100)
+					})
+					
+					$("#header_top .top .left a").eq(3).css({"display":"inline-block","cursor":"pointer"})
+					$("#header_top .top .left a").eq(3).click(function(){
+//						return false;
+						removeCookie("username");
+						setTimeout(function(){location.reload()},100)	
+					})
+					//---------------
+					foo3();
+				})
+			}
+			//--------------------------------------foo2
+			function foo2(){
+				$(function(){
+					foo3();
+				})
+			}
+		
+		function foo3(){
+				var index = 0;
+			function start(){
+				$(".pic li").eq(index).find(".img1").animate({"left":0},1000,function(){
+					$(this).next().show().animate({"left":0},1000);
+				})
+			}
+			start();
+			setInterval(move,3000);
+			function move(){
+				index++;
+				if(index == $(".pic li").length){
+					index = 0;
+				}
+				$(".pic li").eq(index).fadeIn(500).siblings().fadeOut(500);
+				$(".nav li").eq(index).addClass("select").siblings().removeClass("select");
+				
+				start();
+				
+				$(".pic li").eq(index).siblings().find(".img1").css("left",-910).next().hide().css("left",-20);
+				
+				}
+			
+			
+		}
+			
+		</script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

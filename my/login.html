@@ -5,12 +5,14 @@
 		<title></title>
 			<link rel="stylesheet" type="text/css" href="css/comm.css">
 			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+			<script type="text/javascript" src="js/common.js"></script>
+			
 		<style>
 				header{margin-top:0;}
 				#menu .menu a{display:inline-block;width:100px;height:30px;background:#870000; ;margin-top:5px;font:14px/30px "microsoft yahei";color:#fff;padding:0 5px;box-sizing: border-box;text-align:left;margin-left:60px;position:relative;}
 					#menu .menu a strong{border-width:10px;border-color:#fff transparent transparent;border-style:solid;position:absolute;right:8px;top:10px;}
 				/****************************************section*/
-				section{width:100%;background:#FFFACD;padding:20px 0 10px 0;}
+				section{width:100%;padding:20px 0 10px 0;}
 					#con{width:1190px;min-height:200px;height:auto!important;height:200px;border:1px solid #ccc;margin:0 auto;overflow:hidden;}
 						#con .left{width:455px;min-height:300px;height:auto!important;height:300px;padding-bottom:150px;float:left;padding:15px 30px;box-sizing: border-box;}
 							#con .left h1{font:25px/40px "microsoft yahei";font-weight:bold;}
@@ -40,8 +42,10 @@
 				<div class="top">
 					<div class="left">
 						<span>欢迎光临本站!</span>
-						<a href="login.html">登录</a>
+						<a style="display:none;cursor: pointer;" class="user1"></a>
+						<a href="login.html" class="user2">登录</a>
 						<a href="regist.html">免费注册</a>
+						<a class="drop">退出</a>
 					</div>
 					<div class="right">
 						<a><span>&#xe625;</span>手机版
@@ -205,7 +209,44 @@
 			</div>
 		</footer>
 		<script type="text/javascript">
-			$(function(){
+			
+			var str1=getCookie("username");
+			var str2=decodeURI(str1);
+//			console.log(str2);
+			str1?foo1():foo2()
+			//--------------------------------------foo1
+			function foo1(){
+				$(function(){
+					//---------------------------------------------------------head变化
+					$("#header_top .top .left span").html("您好，欢迎您回来！")
+					$("#header_top .top .left .user1").html(str2);
+					
+					$("#header_top .top .left .user1").css({"font-weight":"bold","font-style":"italic"});
+					$("#header_top .top .left .user2").css("display","none");
+					$("#header_top .top .left .user1").css("display","inline-block");
+					
+					$("#header_top .top .left .user1").click(function(){
+						setTimeout(function(){location.href="usercenter.html"},100)
+					})
+					
+					$("#header_top .top .left a").eq(3).css({"display":"inline-block","cursor":"pointer"})
+					$("#header_top .top .left a").eq(3).click(function(){
+//						return false;
+						removeCookie("username");
+						setTimeout(function(){location.reload()},100)	
+					})
+					//---------------
+					foo3();
+				})
+			}
+			//--------------------------------------foo2
+			function foo2(){
+				$(function(){
+					foo3();
+				})
+			}
+			
+			function foo3(){
 				$("#btn").click(function(){
 					$.post("http://127.0.0.1/stage333/Hgou_my/login.php",{"username":$("#un").val(),"password":$("#pw").val()},function(data){
 						data=eval(data);
@@ -214,7 +255,14 @@
 						for(var i=0;i<data.length;i++){
 //							console.log(data[0].username)
 							if($("#un").val()==data[i].username&&$("#pw").val()==data[i].password&&$("#cd").val()=="3JC8"){
-								location.href="sy.html";
+								
+								var str=encodeURI($("#un").val());
+//								console.log(str);
+								setCookie("username",str,1);
+								setTimeout(function(){location.href="sy.html";},100)
+								
+								
+//								var getShuju=getCookie("user");
 								return;
 							}
 							if($("#un").val()!=data[i].username){
@@ -235,7 +283,7 @@
 						
 					})
 				})
-			})
+			}
 		</script>
 	</body>
 </html>
