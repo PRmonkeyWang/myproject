@@ -7,99 +7,7 @@
 			<script type="text/javascript" src="js/common.js"></script>
 			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 			<script type="text/javascript" src="js/template.js"></script>
-			<style>
-				
-				section{width:100%;padding:10px 0;}
-				/*************************************************banner图*/
-					#banner{width:1190px;height:300px;margin:0 auto;position:relative;}
-						#banner .pic{width:1010px;height:300px;overflow:hidden;position:absolute;right:0;}
-
-						#banner .pic ul li{width:1010px;height:300px;position:relative;overflow:hidden;}
-						#banner .img1{position:absolute;left:-1010px;top:0px;width:1010px;height:300px;}
-						#banner .img2{position:absolute;left:-20px;top:0px;display:none;width:1010px;height:300px;opacity:.9}
-
-					/*按钮区域*/
-						#banner .nav ul li{border:1px solid white;width:15px;height:15px;float:left;margin-left:5px;}
-						#banner .nav{width:125px;height:30px;position:absolute;right:10px;bottom:10px;}
-						#banner .select{background-color:white;}
-					aside{width:150px;height:300px;position:absolute;left:0;border:1px solid darkred;}
-						aside ul .li1{width:150px;height:33px;border-bottom:1px solid #CCCCCC;box-sizing: border-box;position:relative;}
-						aside ul .li1:last-child{border-bottom:0;}
-							aside ul .li1 .a1{font:13px/31px "microsoft yahei";position:absolute;left:10px;width:140px;}
-							aside ul .li1 a:hover menu{color:#666;}
-							aside ul .li1 p{float:left;}
-							aside ul .li1 b{float:right;padding:0 10px;}
-							aside ul .li1 .span1{background-image:url(img/menu_icon.png);float:left;width:30px;height:31px;padding:0 10px;box-sizing: border-box;}
-								aside ul .li1 menu{width:650px;min-height:100px;height:auto!important;height:100px;position:absolute;border:1px solid #CCCCCC;left:140px;background:#fff;padding:5px 0;overflow:hidden;display:none;}
-									aside ul .li1:hover menu{display:block;}
-									/*--------------------------------------------------*/
-									aside ul .li1 menu ul:nth-of-type(1){width:400px;min-height:100px;height:auto!important;height:100px;float:left;}
-									aside ul .li1 menu ul:nth-of-type(2){width:249px;min-height:100px;height:auto!important;height:100px;border-left:1px dashed #CCCCCC;float:left;}
-									/*-------------------------------------------------*/
-								aside ul .li1 menu ul li{height:130px;width:200px;float:left;}
-									aside ul .li1 menu ul li h3{text-align: left;padding:0 10px;cursor: pointer;}
-										aside ul .li1 menu ul li h5:hover{color:darkred;}
-									aside ul .li1 menu ul li span:nth-of-type(odd){display:inline-block;padding:0 10px;cursor: pointer;font:14px/17px "microsoft yahei";}
-									aside ul .li1 menu ul li span:nth-of-type(even){display:inline-block;padding:0 5px;font:15px/17px "microsoft yahei";color:#CCCCCC;}
-										aside ul .li1 menu ul li span:hover{color:darkred;}
-			
-				article{width:1190px;height:495px;border-left:1px solid #CCCCCC;margin:0 auto;margin-top:20px;position:relative;}
-					article figure:nth-of-type(1){width:900px;height:495px;float:left;}
-					article figure div{float:left;box-sizing: border-box;}
-						article figure:nth-of-type(1) .left{border-top:3px solid darkred;box-sizing: border-box;width:300px;height:100%;}
-							article figure:nth-of-type(1) .left div p{font:15px/50px "microsoft yahei";text-indent: 20px;color:#000}
-							article figure:nth-of-type(1) .left div p i{color:darkred;font-size:25px;}
-						
-						article figure:nth-of-type(1) .left div{border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;}
-						article figure:nth-of-type(1) .center div{border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;}
-						article figure:nth-of-type(1) .right div{border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;}
-						
-							
-							
-						article figure:nth-of-type(1) .center{border-top:3px solid #CCCCCC;box-sizing: border-box;width:300px;height:100%;}
-							
-						article figure:nth-of-type(1) .right{border-top:3px solid #CCCCCC;box-sizing: border-box;width:300px;height:100%;}
-						
-					article figure:nth-of-type(2){width:279px;height:495px;float:left;margin-left:10px;border-top:3px solid #CCCCCC;border-left:1px solid #CCCCCC}
-						article figure:nth-of-type(2) div{width:139px;height:62px;border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;}
-					/*-----------------------------------------第六个article*/
-					.article6{width:1190px;height:200px;margin:0 auto;margin-top:20px;position:relative;border:0;}
-						.article6 .left{width:590px;height:200px;float:left;}
-						.article6 .right{width:590px;height:200px;float:right;}
-						
-						.article6 h4{font:15px/50px "microsoft yahei";text-indent: 20px;color:#999}
-						.article6 h4 i{color:darkred;font-size:18px;}	
-						.article6 .con{width:590px;height:150px;border:1px solid #CCCCCC;box-sizing: border-box;border-top:3px solid #CCCCCC}
-							.article6 .left .con a{float:left;padding:5px 10px;font:20px/30px "microsoft yahei";color:#000;}
-								.article6 .left .con a:hover{color:darkred}
-							.article6 .right .con .con_left{height:147px;width:187px;border-right:1px solid #CCCCCC;float:left;}
-							
-								.article6 .right .con .con_left .top{height:73px;width:189px;border-bottom:1px solid #CCCCCC;}
-									.article6 .right .con .con_left .top .top_left{width:60px;height:73px;float:left;}
-									.article6 .right .con .con_left .top .top_right{width:128px;height:73px;float:left;}
-								.article6 .right .con .con_left .bottom{height:73px;width:189px;}
-								
-							.article6 .right .con .con_right{height:147px;width:400px;float:left;}
-								.article6 .right .con .con_right div{width:200px;height:37px;float:left;line-height:16px;}
-									.article6 .right .con .con_right div span{float:left;border:1px solid #CCCCCC;width:40px;height:33px;}
-						
-					/*-----------------------------------------第七个article*/
-					.article7{width:1190px;height:300px;margin:0 auto;margin-top:20px;position:relative;border:0;}
-						.article7 .center{width:1190px;height:300px;float:left;}
-						
-						
-						.article7 h4{font:15px/50px "microsoft yahei";text-indent: 20px;color:#999}
-						.article7 h4 i{color:darkred;font-size:18px;}	
-						.article7 .con{width:1190px;height:250px;border:1px solid #CCCCCC;box-sizing: border-box;border-top:3px solid #CCCCCC}		
-							.article7 .con ul{width:1190px;height:247px;}
-							.article7 .con ul li{width:148px;height:247px;border-right:1px solid #CCCCCC;box-sizing: border-box;float:left;}
-							.article7 .con li a{width:147px;height:217px;float:left;}
-								.article7 .con li a strong{width:147px;height:157px;float:left;}
-								.article7 .con li a em{width:147px;height:60px;float:left;text-align:left;font:15px/30px "microsoft yahei";overflow:hidden;text-indent: 10px;;}
-								
-							.article7 .con li span{width:147px;height:30px;float:left;font:20px/20px "microsoft yahei";color:darkred;}
-							.article7 .con ul li:nth-of-type(8){border:none;}
-			</style>
+			<link rel="stylesheet" type="text/css" href="css/sy.css">
 			
 	</head>
 	<body>
@@ -130,7 +38,7 @@
 						<b>|</b>
 						<a href="#">加入收藏</a>
 						<b>|</b>
-						<a href="#"><span>&#xe654;</span>购物车</a>
+						<a href="gwc.html"><span>&#xe654;</span>购物车</a>
 					</div>
 				</div>
 			</div>
@@ -213,88 +121,110 @@
 				<aside>
 					<ul>
 						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-35px"></span><p>母婴用品</p><b>></b>
-							<menu>
-								<ul >
-									<li>
-										<h3>奶粉</h3>
-										<span>孕妇奶粉</span>
-										<span>|</span>
-										<span>成人奶粉</span>
-										<span>|</span>
-										<span>一段</span>
-										<span>|</span>
-										<span>二段</span>
-										<span>|</span>
-										<span>三段</span>
-										<span>|</span>
-										<span>特殊配方奶粉</span>
-									</li>
-									<li>
-										
-									</li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-								<ul>
-									<li style="margin-left:20px;">
-										<h3>奶粉</h3>
-										<span>孕妇奶粉</span>
-										<span>|</span>
-										<span>成人奶粉</span>
-										<span>|</span>
-										<span>一段</span>
-										<span>|</span>
-										<span>二段</span>
-										<span>|</span>
-										<span>三段</span>
-										<span>|</span>
-										<span>特殊配方奶粉</span>
-									</li>
-								</ul>
+							
+							<menu>	
 							</menu>
 							
+							<script id="tab0" type="text/html">
+								
+									<ul>
+										{{each list0 as value}}
+										<li>
+											<h3>{{value.title}}</h3>
+											{{each value.type as i}}
+												<span style="float:left;font:15px/20px '楷体';color:#000;">{{i}}<i style="margin-left:10px;">|</i></span>
+											{{/each}}
+										</li>
+										{{/each}}
+									</ul>
+									<ul>
+										<li style="margin-left:20px;">
+											<h3>热门品牌</h3>	
+										</li>
+									</ul>
+								
+							</script>
+							
 						</a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-69px"></span><p>美容个护</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-103px"></span><p>营养保健</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-136px"></span><p>服饰鞋帽</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-170px"></span><p>箱包手袋</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-201px"></span><p>食品饮料</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-235px"></span><p>居家日用</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:0px"></span><p>运动户外</p><b>></b></a></li>
-						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-297px"></span><p>全部分类与品牌</p></a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-69px"></span><p>美容个护</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-103px"></span><p>营养保健</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-136px"></span><p>服饰鞋帽</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-170px"></span><p>箱包手袋</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-201px"></span><p>食品饮料</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-235px"></span><p>居家日用</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:0px"></span><p>运动户外</p><b>></b>
+							<menu>	
+							</menu>
+						</a></li>
+						<li class="li1"><a class="a1" href="#"><span class="span1" style="background-position-y:-297px"></span><p>全部分类与品牌</p>
+							<menu>	
+							</menu>
+						</a></li>
 					</ul> 
 				</aside>
 			</div>
+			<!--------------------------------------------------->
+			<script>
+				var aLi1=document.getElementsByClassName("li1");
+				for(var i=0;i<aLi1.length;i++){
+					aLi1[i].onclick=function(){
+						location.href="list.html";
+					}
+				}
+			</script>
+			<!--------------------------------------------------->
 			<!-----------------------------------------第一个article-->
 			<article>
 				<figure>
+					
 					<div class="left">
 						<div style="width:100%;height:166px;background:#f6f6f6 url(img/icon_hk.png) no-repeat right bottom">
-							<p><i>香港馆</i> •̀Hong Kong</p>
+							<p><a href="#"><i>香港馆</i> •̀Hong Kong</a></p>
 						</div>
-						<div style="width:100%;height:330px;"></div>
+						<div class="big" style="width:100%;height:330px;"></div>
 					</div>
 					<div class="center">
-						<div style="width:100%;height:166px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
+						<div class="big" style="width:100%;height:166px;"></div>
+						<div class="small" style="width:150px;height:165px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:165px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:165px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:165px;"><span class="small_price"></span></div>
 					</div>
 					<div class="right">
-						<div style="width:100%;height:248px"></div>
-						<div style="width:100%;height:248px"></div>
+						<div class="big" style="width:100%;height:248px;"></div>
+						<div class="big" style="width:100%;height:248px;"></div>
 					</div>
+					
+					<!--<script id="tab_1" type="text/html">
+						{{each list_1 as value}}
+							
+						{{/each}}
+					</script>-->
 				</figure>
+				
 				<figure id="image2">
 				</figure>
 					<script id="tab1" type="text/html">
 						{{each list1 as value}}
-							<div style="background:url(img/art1/{{value.imgsrc}}) no-repeat center 5px"></div>
+							<a href="#" style="float:left;"><div style="background:url(img/art1/{{value.imgsrc}}) no-repeat center 5px"></div></a>
 						{{/each}}
 					</script>
 			</article>
@@ -303,31 +233,28 @@
 				<figure>
 					<div class="left">
 						<div style="width:100%;height:166px;background:#f6f6f6 url(img/icon_usa.png) no-repeat right bottom">
-							<p><i>美国馆</i> •̀USA</p>
+							<p><a href="#"><i>美国馆</i> •̀USA</a></p>
 						</div>
-						<div style="width:100%;height:330px;"></div>
+						<div class="small" style="width:150px;height:150px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:150px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:150px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:150px;"><span class="small_price"></span></div>
+						
 					</div>
 					<div class="center">
-						<div style="width:100%;height:166px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
+						<div class="big" style="width:100%;height:166px;"></div>
+						<div class="big" style="width:100%;height:300px;"></div>
+						
 					</div>
 					<div class="right">
-						<div style="width:100%;height:248px"></div>
-						<div style="width:100%;height:248px"></div>
+						<div class="big" style="width:100%;height:228px"></div>
+						<div class="big" style="width:100%;height:238px"></div>
 					</div>
 				</figure>
 				<figure id="image3" style="width:278px;height:1010px;border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;position:absolute;right:0;">
 					<p style="font:25px/30px 'microsoft yahei';">晒单专区<span style="float:right;font:15px/30px 'microsoft yahei'">更多</span></p>
 				</figure>
 				
-					<!--<script id="tabss" type="text/html">
-						{{each lists as value}}
-							<div style="background:url(img/pp/{{value.imgsrc}}) no-repeat center 5px"></div>
-						{{/each}}
-					</script>-->
 					
 			</article>
 			<!--------------------------------------------第三个article-->
@@ -335,80 +262,68 @@
 				<figure>
 					<div class="left">
 						<div style="width:100%;height:166px;background:#f6f6f6 url(img/icon_asia.png) no-repeat right bottom">
-							<p><i>亚洲馆</i> •̀Asia</p>
+							<p><a href="#"><i>亚洲馆</i> •̀Asia</a></p>
 						</div>
-						<div style="width:100%;height:330px;"></div>
+						<div class="big" style="width:100%;height:160px;"></div>
+						<div class="small" style="width:50%;height:170px"><span class="small_price"></span></div>
+						<div class="small" style="width:50%;height:170px"><span class="small_price"></span></div>
 					</div>
 					<div class="center">
-						<div style="width:100%;height:166px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
+						<div class="big" style="width:100%;height:496px;"></div>
 					</div>
 					<div class="right">
-						<div style="width:100%;height:248px"></div>
-						<div style="width:100%;height:248px"></div>
+						<div class="big" style="width:100%;height:160px"></div>
+						<div class="big" style="width:100%;height:336px"></div>
 					</div>
 				</figure>
-				
-				<!--<figure id="image3">
-					<p style="font:25px/30px 'microsoft yahei';">晒单专区<span style="float:right;font:15px/30px 'microsoft yahei'">更多</span></p>
-				</figure>-->
-				
-					<!--<script id="tabss" type="text/html">
-						{{each lists as value}}
-							<div style="background:url(img/pp/{{value.imgsrc}}) no-repeat center 5px"></div>
-						{{/each}}
-					</script>-->
 					
 			</article>
-			<!--------------------------------------------第四个article-->
-			<article style="width:590px;display:inline-block;margin-left:115px;">
+			<!--------------------------------------------第（四-1）个article-->
+			<div id="article4">
+			<article style="width:590px;display:inline-block;">
 				<figure style="width:590px;display:inline-block">
 					<div class="left">
-						<div style="width:100%;height:166px;background:#f6f6f6 url(img/icon_aust.png) no-repeat right bottom">
-							<p><i>澳新馆</i> •̀Australia</p>
+						
+						<div style="width:100%;height:165px;background:#f6f6f6 url(img/icon_aust.png) no-repeat right bottom">
+							<p><a href="#"><i>澳新馆</i> •̀Australia</a></p>
 						</div>
-						<div style="width:100%;height:330px;"></div>
+						
+						<div class="big" style="width:100%;height:165px;"></div>
+						<div class="small" style="width:50%;height:165px"><span class="small_price"></span></div>
+						<div class="small" style="width:50%;height:165px"><span class="small_price"></span></div>
 					</div>
 					<div class="center" style="width:290px;">
-						<div style="width:100%;height:166px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:140px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:140px;height:165px;"></div>
+						<div class="big" style="width:100%;height:496px;"></div>
+						
 					</div>
-					<!--<div class="right">
-						<div style="width:100%;height:248px"></div>
-						<div style="width:100%;height:248px"></div>
-					</div>-->
 				</figure>
 					
 			</article >
-			<!--------------------------------------------第五个article-->
+			<!--------------------------------------------第（四-2）个article-->
+			
 			<article style="width:590px;display:inline-block;margin-left:5px;">
 				<figure style="width:590px;display:inline-block">
+					<!--<script id="tab5" type="text/html">
+					{{each list5 as value}}-->
 					<div class="left">
 						<div style="width:100%;height:166px;background:#f6f6f6 url(img/icon_europe.png) no-repeat right bottom">
-							<p><i>欧洲馆</i> •̀Europe</p>
+							<p><a href="#"><i>欧洲馆</i> •̀Europe</a></p>
 						</div>
-						<div style="width:100%;height:330px;"></div>
+						<div class="big" style="width:100%;height:330px;"></div>
 					</div>
 					<div class="center" style="width:290px;">
-						<div style="width:100%;height:166px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:140px;height:165px;"></div>
-						<div style="width:150px;height:165px;"></div>
-						<div style="width:140px;height:165px;"></div>
+						<div class="big" style="width:100%;height:166px;"></div>
+						<div class="small" style="width:150px;height:165px;"><span class="small_price"></span></div>
+						<div class="small" style="width:140px;height:165px;"><span class="small_price"></span></div>
+						<div class="small" style="width:150px;height:165px;"><span class="small_price"></span></div>
+						<div class="small" style="width:140px;height:165px;"><span class="small_price"></span></div>
 					</div>
-					<!--<div class="right">
-						<div style="width:100%;height:248px"></div>
-						<div style="width:100%;height:248px"></div>
-					</div>-->
+					<!--{{/each}}
+					</script>-->
 				</figure>
 					
 			</article>
+			</div>
 			<!--------------------------------------------第六个article-->
 			<article class="article6">
 				<div class="left">
@@ -425,26 +340,27 @@
 					<div class="con">
 						<div class="con_left">
 							<div class="top">
-								<div class="top_left"></div>
-								<div class="top_right"></div>
+								<!--********************************************************num6-->
+								<script id="tab6" type="text/html">
+								{{each list6 as value}}
+								<a href="#" style="display:inline-block;">
+									<div class="top_left" style="background:url(img/art6/a/{{value.imgsrc}}) no-repeat center top/contain"></div>
+									<div class="top_right" style="font-size:13px;padding:10px 17px;box-sizing: border-box;">{{value.title}}</div>
+								</a>
+								{{/each}}
+								</script>
 							</div>
 							<div class="bottom"></div>
 						</div>
 						<div class="con_right">
-							<div><a href="#"><span style="background:url(img/art6/1.jpg) no-repeat center top/contain"></span>【香港代购】韩国JAYJUN整...</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
-							<div><a href="#"><span>1</span>不可描述</a></div>
+							<!--<div><a href="#"><span style="background:url(img/art6/1.jpg) no-repeat center top/contain"></span>【香港代购】韩国JAYJUN整...</a></div>-->
 						</div>
-						<script id="tab6" type="text/html">
-							{{each list6 as value}}
+						<script id="tab66" type="text/html">
+							{{each list66 as value}}
 								<div><a href="#"><span style="background:url(img/art6/{{value.imgsrc}}) no-repeat center top/contain"></span>{{value.title}}</a></div>
 							{{/each}}
 						</script>
+						<!--******************************************************************-->
 					</div>
 				</div>
 			</article>
@@ -454,13 +370,15 @@
 					<h4><i>人气商品</i>•̀ Recommendation</h4>
 					<div class="con">
 						<ul id="hz">
-							<!--<li><a href="#"><strong style="background:url(img/hz/1.jpg) no-repeat center top/contain;"></strong><em>韩国SUM37˚/苏秘37˚BRIGHT AWARD BUBBLE D MASK 美白泡沫面膜 100ml</em></a><span>￥275.0</span></li>-->
+							
 						</ul>
+						<!--************************************************************num7--->
 						<script id="tab7" type="text/html">
 							{{each list7 as value}}
-								<li><a href="#"><strong style="background:url(img/art7/{{value.imgsrc}}) no-repeat center top/contain;"></strong><em>{{value.title}}</em></a><span>{{value.price}}</span></li>
+								<li><a href="#"><strong style="background:url(img/art7/{{value.imgsrc}}) no-repeat center 5px/contain;"></strong><em>{{value.title}}</em></a><span>{{value.price}}</span></li>
 							{{/each}}
 						</script>
+						<!--****************************************************************-->
 					</div>
 				</div>
 			</article>
@@ -543,120 +461,7 @@
 				</div>
 			</div>
 		</footer>
-		<script type="text/javascript">
-			var str1=getCookie("username");
-			var str2=decodeURI(str1);
-//			console.log(str2);
-			str1?foo1():foo2()
-			//--------------------------------------foo1
-			function foo1(){
-				$(function(){
-					//---------------------------------------------------------head变化
-					$("#header_top .top .left span").html("您好，欢迎您回来！")
-					$("#header_top .top .left .user1").html(str2);
-					
-					$("#header_top .top .left .user1").css({"font-weight":"bold","font-style":"italic"});
-					$("#header_top .top .left .user2").css("display","none");
-					$("#header_top .top .left .user1").css("display","inline-block");
-					
-					$("#header_top .top .left .user1").click(function(){
-						setTimeout(function(){location.href="usercenter.html"},100);
-					})
-					
-					$("#header_top .top .left a").eq(3).css({"display":"inline-block","cursor":"pointer"})
-					$("#header_top .top .left a").eq(3).click(function(){
-//						return false;
-						removeCookie("username");
-						setTimeout(function(){location.reload()},100);	
-					})
-					//---------------
-					foo3();
-				})
-			}
-			//--------------------------------------foo2
-			function foo2(){
-				$(function(){
-					foo3();
-					
-				})
-			}
-		
-		function foo3(){
-			var index = 0;
-			function start(){
-				$(".pic li").eq(index).find(".img1").animate({"left":0},1000,function(){
-					$(this).next().show().animate({"left":0},1000);
-				})
-			}
-			start();
-			setInterval(move,3000);
-			function move(){
-				index++;
-				if(index == $(".pic li").length){
-					index = 0;
-				}
-				$(".pic li").eq(index).fadeIn(500).siblings().fadeOut(500);
-				$(".nav li").eq(index).addClass("select").siblings().removeClass("select");
-				
-				start();
-				
-				$(".pic li").eq(index).siblings().find(".img1").css("left",-910).next().hide().css("left",-20);
-				
-			}
-			//----------------------------------------------art1....data--------------------
-				var data1=[{"imgsrc":"1.jpg"},{"imgsrc":"2.jpg"},{"imgsrc":"3.jpg"},{"imgsrc":"4.jpg"},{"imgsrc":"5.jpg"},{"imgsrc":"6.jpg"},{"imgsrc":"7.png"},{"imgsrc":"8.jpg"},{"imgsrc":"9.jpg"},{"imgsrc":"10.jpg"},{"imgsrc":"11.jpg"},{"imgsrc":"12.jpg"},{"imgsrc":"13.jpg"},{"imgsrc":"14.jpg"},{"imgsrc":"15.jpg"},{"imgsrc":"16.jpg"}]
-				var html1 = template("tab1",{"list1":data1});
-				document.getElementById("image2").innerHTML = html1;
-			//----------------------------------------------art6....data--------------------
-				var data6=[{"imgsrc":"1.jpg",
-							"title":"【香港代购】韩国JAYJUN整..."},
-							{"imgsrc":"2.jpg",
-							"title":"【德国】knoppers牛奶榛子巧..."},
-							{"imgsrc":"3.jpg",
-							"title":"香港【楼上】 银耳 古田雪耳 ..."},
-							{"imgsrc":"4.jpg",
-							"title":"兰蔻清滢柔肤水(干性) 大粉水..."},
-							{"imgsrc":"5.jpg",
-							"title":"【韩国】leaders丽得姿面..."},
-							{"imgsrc":"6.jpg",
-							"title":"【美国】Bad Air Spong..."},
-							{"imgsrc":"7.jpg",
-							"title":"【澳洲】Blackmore维骨力葡..."},
-							{"imgsrc":"8.jpg",
-							"title":"【韩国】Guerisson马油霜7..."}];
-				var html6 = template("tab6",{"list6":data6});
-				document.getElementsByClassName("con_right")[0].innerHTML=html6;
-				
-			//----------------------------------------------art7....data--------------------
-				var data7=[{"imgsrc":"1.jpg",
-							"title":"韩国SUM37˚/苏秘37˚BRIGHT AWARD BUBBLE D MASK 美白泡沫面膜 100ml",
-							"price":"￥275.0"},
-							{"imgsrc":"2.jpg",
-							"title":"Dior迪奥魅惑瘾诱粉漾润唇膏 001粉色 004橘色3.5g 变色唇膏",
-							"price":"￥220.0"},
-							{"imgsrc":"3.jpg",
-							"title":"韩国ETUDE HOUSE爱丽小屋素描高手造型眉笔旋转自动眉刷0.2g",
-							"price":"￥28.0"},
-							{"imgsrc":"4.jpg",
-							"title":"韩国AHC b5面膜玻尿酸精华液B5透明质酸面膜补水保湿美白5片",
-							"price":"￥112.0"},
-							{"imgsrc":"5.jpg",
-							"title":"韩国SUM37˚/苏秘37˚SECRET ESSENSE 150 DUTYFREE PLANNING SET 精华素企划套装 免税专用",
-							"price":"￥685.0"},
-							{"imgsrc":"6.jpg",
-							"title":"兰蔻清滢柔肤水(干性) 大粉水 400ml 全网第一补水神器",
-							"price":"￥299.0"},
-							{"imgsrc":"7.jpg",
-							"title":"英国The body shop生姜洗发水400ml",
-							"price":"￥139.0"},
-							{"imgsrc":"8.jpg",
-							"title":"澳洲Swisse液体叶绿素/片状叶绿素 清肠排毒保健",
-							"price":"￥168.0"}];
-				var html7 = template("tab7",{"list7":data7});
-				document.getElementById("hz").innerHTML = html7;
-		}
-			
-		</script>
+		<script type="text/javascript" src="js/sy.js">	</script>
 	</body>
 </html>
 

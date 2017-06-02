@@ -4,11 +4,10 @@
 		<meta charset="UTF-8">
 		<title></title>
 			<link rel="stylesheet" type="text/css" href="css/comm.css">
-			<script type="text/javascript" src="js/common.js"></script>
 			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-			<style>
-				
-			</style>
+			<script type="text/javascript" src="js/common.js"></script>
+			<script type="text/javascript" src="js/template.js"></script>
+			<link rel="stylesheet" type="text/css" href="css/gwc.css">
 	</head>
 	<body>
 		<!------------------------------------header-->
@@ -81,16 +80,46 @@
 					<i></i>
 					<b>海外商城</b>
 					<em>专业买手 全球直购</em>
+					<a href="#">全部分类<strong></strong></a>
 				</div>
 			</div>
 		</header>
 		
-		<!------------------------------------section-->
-		<section>
-			
-		</section>
+		<!---------------------------------------------------内容！！！-->
 		
-		<!------------------------------------footer-->
+		<section>
+			<h2 style="color:#fff;">1.我的购物袋</h2>
+			<h2 style="background-position:-100px -70px">2.确认订单信息</h2>
+			<h2 style="background-position:-100px -70px">3.成功提交订单</h2>
+			<ul id="con">
+				<div id="top">
+					<span class="a">商品名称</span>
+					<span class="b">属性</span>
+					<span class="c">市场价</span>
+					<span class="d">本店价</span>
+					<span class="e">购买数量</span>
+					<span class="f">小计</span>
+					<span class="g">操作</span>
+				</div>
+				<div id="middle">
+					<li>
+						<span class="a">商品名称</span>
+						<span class="b">属性</span>
+						<span class="c">市场价</span>
+						<span class="d">本店价</span>
+						<span class="e">购买数量</span>
+						<span class="f">0</span>
+						<span class="g">操作</span>
+					</li>
+					
+				</div>
+				<div id="bottom"></div>
+			</ul>
+		</section>
+		<div style="position:fixed;right:20px;top:20px;width:100px;height:50px;font:20px/50px 'microsoft yahei';background:#FFFFFF;border-radius:10px;padding:5px 15px;opacity:.8;cursor: pointer;">购物车<span id="getspan" style="color:red;float:right;">0</span></div>
+			
+		<!------------------------------------------------------------>
+		
 		<footer>
 			<div id="footer_top">
 				<div class="top">
@@ -166,46 +195,7 @@
 				</div>
 			</div>
 		</footer>
-		
-		<script type="text/javascript">
-			var str1=getCookie("username");
-			var str2=decodeURI(str1);
-//			console.log(str2);
-			str1?foo1():foo2()
-			//--------------------------------------foo1
-			function foo1(){
-				$(function(){
-					//---------------------------------------------------------head变化
-					$("#header_top .top .left span").html("您好，欢迎您回来！")
-					$("#header_top .top .left .user1").html(str2);
-					
-					$("#header_top .top .left .user1").css({"font-weight":"bold","font-style":"italic"});
-					$("#header_top .top .left .user2").css("display","none");
-					$("#header_top .top .left .user1").css("display","inline-block");
-					
-					$("#header_top .top .left .user1").click(function(){
-						setTimeout(function(){location.href="usercenter.html"},100)
-					})
-					
-					$("#header_top .top .left a").eq(3).css({"display":"inline-block","cursor":"pointer"})
-					$("#header_top .top .left a").eq(3).click(function(){
-//						return false;
-						removeCookie("username");
-						setTimeout(function(){location.reload()},100)	
-					})
-					//---------------
-					foo3();
-				})
-			}
-			//--------------------------------------foo2
-			function foo2(){
-				$(function(){
-					foo3();
-				})
-			}
-			function foo3(){
-				
-			}
+		<script type="text/javascript" src="js/gwc.js">
 			
 		</script>
 	</body>

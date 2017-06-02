@@ -1,0 +1,24 @@
+header{margin-top:0;}
+				#menu .menu a{display:inline-block;width:100px;height:30px;background:#870000; ;margin-top:5px;font:14px/30px "microsoft yahei";color:#fff;padding:0 5px;box-sizing: border-box;text-align:left;margin-left:60px;position:relative;}
+					#menu .menu a strong{border-width:10px;border-color:#fff transparent transparent;border-style:solid;position:absolute;right:8px;top:10px;}
+				/****************************************section*/
+				section{width:100%;padding:20px 0 10px 0;}
+					#con{width:1190px;min-height:200px;height:auto!important;height:200px;border:1px solid #ccc;margin:0 auto;overflow:hidden;}
+						#con .left{width:550px;height:500px;float:left;padding:15px 30px;box-sizing: border-box;}
+							#con .left h1{font:25px/40px "microsoft yahei";font-weight:bold;}
+								#con .left h1 em{font:13px/60px "microsoft yahei";}
+								#con .left h1 em a{text-decoration: underline;color:red}
+							#con .left ul li{padding-left:30px;box-sizing: border-box;margin-top:20px;}
+								#con .left ul li input{width:200px;height:30px;border:0;box-shadow: 2px 2px 2px #CCCCCC inset ;}
+								#con .left ul li input[type="checkbox"]{width:15px;height:15px;}
+								#con .left ul li i{margin-left:10px;color:red;}
+								#con .left ul li a{color:red;margin-left:20px;}
+									#con .left ul li a:hover{color:darkred}
+								#con .left ul li a:nth-child(1){margin-left:50px;}
+								
+								#con .left ul li ol{width:180px;height:30px;display:inline-block;}
+									#con .left ul li ol div{width:60px;height:30px;float:left;text-align:center;border-bottom:2px solid #999;}
+							#con .left form p{width:70px;display:inline-block;text-align:right;font-size:15px;}
+							
+					
+						#con .right{width:600px;height:500px;float:right;background:url(img/hgou.jpg) no-repeat center 85px;}

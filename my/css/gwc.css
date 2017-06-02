@@ -1,0 +1,15 @@
+section{width:1190px;margin:40px auto;padding-bottom:40px;}
+					section h2{width:160px;height:40px;float:left;margin-left:5px;background:url(img/ribbon_01.png) no-repeat -100px -10px;color:#666;font:15px/40px "microsoft yahei";text-indent: 20px;}
+					section #con{float:left;width:1190px;min-height:200px;height:auto!important;height:200px;border:1px solid #CCCCCC;margin-top:20px;}
+						section #con #top{width:100%;height:40px;border-bottom:1px solid #CCCCCC;}
+							section #con #top span{height:40px;float:left;font:15px/40px "microsoft yahei";color:#333;text-align:center;}
+							section #con .a{width:500px;}
+							section #con .b{width:110px;}
+							section #con .c{width:110px;}
+							section #con .d{width:110px;}
+							section #con .e{width:140px;}
+							section #con .f{width:110px;}
+							section #con .g{width:110px;}
+						section #con #middle{min-height:100px;height:auto!important;height:100px;border-bottom:1px solid #CCCCCC;}
+							section #con #middle span{height:60px;float:left;font:15px/30px "microsoft yahei";color:#333;text-align:center;padding-top:20px;}
+						section #con #bottom{height:120px;border-bottom:1px solid #CCCCCC;}

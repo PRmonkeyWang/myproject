@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" type="text/css" href="css/comm.css">
+			<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+			<script type="text/javascript" src="js/common.js"></script>
+			<script type="text/javascript" src="js/template.js"></script>
+			<link rel="stylesheet" type="text/css" href="css/list.css">
+		
+	</head>
+	<body>
+		<!------------------------------------header-->
+		<header>
+			<div id="header_top">
+				<div class="top">
+					<div class="left">
+						<span>欢迎光临本站!</span>
+						<a style="display:none;cursor: pointer;" class="user1"></a>
+						<a href="login.html" class="user2">登录</a>
+						<a href="regist.html">免费注册</a>
+						<a class="drop">退出</a>
+					</div>
+					<div class="right">
+						<a><span>&#xe625;</span>手机版
+							<ul>
+								<li><img src="img/qr.jpg"></li>
+							</ul>
+						</a>
+						<b>|</b>
+						<a href="#">我的嗨购网
+							<ul>
+								<li>我的订单</li>
+								<li>分享有礼</li>
+							</ul>
+						</a>
+						<b>|</b>
+						<a href="#">加入收藏</a>
+						<b>|</b>
+						<a href=""gwc.html""><span>&#xe654;</span>购物车</a>
+					</div>
+				</div>
+			</div>
+			<div id="nav">
+				<a href="sy.html"><div class="left1"></div></a>
+				<div class="left2">
+					<p>嗨购全球　我们只做正品</p>
+					<span>hgou360.com</span>
+				</div>
+				<div class="right1">
+					<div class="top">
+						<form>
+						<select>
+							<option>宝贝</option>
+							<option>品牌</option>
+						</select>
+						<input type="text" placeholder="请输入搜索关键字">
+						<a href="#"><img src="img/search.png"></a>
+						</form>
+					</div>
+					<div class="bottom">
+						<b>热门搜索 :</b>
+						<a href="#">Tiger保温杯</a>
+						<a href="#">防晒</a>
+						<a href="#">保湿</a>
+						<a href="#">美白</a>
+						<a href="#">酵素</a>
+					</div>
+				</div>
+				<div class="right2">
+					<a href="#"><span></span>香港馆</a>
+					<a href="#"><span style="background-position:-27px 0"></span>美国馆</a>
+					<a href="#"><span style="background-position:-54px 0"></span>亚洲馆</a>
+					<a href="#"><span style="background-position:-83px 0"></span>澳洲馆</a>
+					<a href="#"><span style="background-position:-110px 0"></span>欧洲馆</a>
+				</div>
+			</div>
+			<div id="menu">
+				<div class="menu">
+					<i></i>
+					<b>海外商城</b>
+					<em>专业买手 全球直购</em>
+					<a href="#">全部分类<strong></strong></a>
+				</div>
+			</div>
+		</header>
+		
+		<!------------------------------------section-->
+		<section>
+			<h3><span>当前位置：</span><a href="#">首页</a>><a href="#">母婴用品</a></h3>
+			<div id="con">
+				<div id="left">
+					<div id="top">
+						<div class="left"><p>品牌:</p></div>
+						<div class="right">
+							<a href="#">全部</a>
+							<a href="#">GNC</a>
+							<a href="#">Burt's Bees小蜜蜂</a>
+							<a href="#">ChildLife/童年时光</a>
+							<a href="#">SWISSE</a>
+							<a href="#">NATURE MADE</a>
+							<a href="#">SANOFI</a>
+							<a href="#">KOBAYASHI/小林</a>
+							<a href="#">屁屁乐/Sudocrem</a>
+							<a href="#">ChildLife/童年时光</a>
+							<a href="#">Earth Mama地球妈妈</a>
+							<a href="#">Comotomo可么可多</a>
+							<a href="#">JEJU</a>
+							
+							<a href="#">GNC</a>
+							<a href="#">KAWAI卡哇伊</a>
+							<a href="#">Wwyeth惠氏</a>
+							<a href="#">SWISSE</a>
+							<a href="#">NATURE MADE</a>
+							<a href="#">SANOFI</a>
+							<a href="#">KOBAYASHI/小林</a>
+							<a href="#">屁屁乐/Sudocrem</a>
+							<a href="#">小林制药</a>
+							<a href="#">Melin美林</a>
+							<a href="#">Comotomo可么可多</a>
+							<a href="#">JEJU</a>
+							
+						</div>
+					</div>
+					<div id="middle">
+						<a href="#">默认</a>
+						<a href="#">销量</a>
+						<a href="#">价格</a>
+						<b>共发现<span>83</span>件</b>
+					</div>
+					<div id="bottom">
+						<script type="text/html" id="tab0">
+						{{each list0 as value}}
+						<ul>
+							<li>
+								<div style="background:url(img/art7/{{value.imgsrc}}) no-repeat center top/contain"></div>
+								<p>{{value.title}}</p>
+								<p>品牌：MELIN</p>
+								<p><b>{{value.price}}</b><span>市场价：￥63.0</span></p>
+							</li>
+						</ul>
+						{{/each}}
+						</script>
+					</div>
+					<!----------------------------->
+					<div id="pagenum">
+						<a class="golast">上一页</a>
+						<div class="num">
+							
+						</div>
+						<a class="gonext">下一页</a>
+					</div>
+					<!----------------------------->
+					
+					
+					
+				</div>
+				<div id="right">
+					<h4>嗨购推荐</h4>
+					<ul id="right_con">
+						<script type="text/html" id="tab1">
+							{{each list1 as value}}
+							<li>
+								<div style="background:url(img/art6/{{value.imgsrc}}) no-repeat center top/contain"></div>
+								<p>{{value.price}}</p>
+								<p>{{value.title}}</p>
+								
+							</li>
+							{{/each}}
+						</script>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript">
+			$(function(){
+				$.get("json/data8.json",{},function(data){
+					console.log(data);
+					
+					
+					var oNum=document.getElementsByClassName("num")[0];
+					var num=Math.ceil(data.length/24);
+					for(var i=0;i<num;i++){
+						var oA=document.createElement("a");
+						var txt=document.createTextNode(i);
+						oA.appendChild(txt);
+						oNum.appendChild(oA);
+					}
+					
+					var arr=[];
+				
+					for(m=0;m<num;m++){
+						var data0=[];
+						var s1=m*24;
+						var s2=(m+1)*24;
+						for(var j=s1;j<s2;j++){
+						if(data[j]){
+							data0.push(data[j]);
+							}
+						}
+						arr.push(data0);
+					}
+					
+//					console.log(arr);
+					//---------------------------列表页初始状态
+					var html0 = template("tab0",{"list0":arr[0]});
+					var oBottom=document.getElementById("bottom");
+					oBottom.innerHTML=html0;
+					$("#pagenum .num a").eq(0).css({"background":"darkred"},{"color":"white"}).siblings().css({"background":"#fff"},{"color":"darkred"})
+					//--------------------------------
+					var index=null;
+					var ooA=oNum.getElementsByTagName("a");	
+					for(var k=0;k<ooA.length;k++){
+						ooA[k].index=k;
+						ooA[k].onclick=function(){
+//							console.log(this.index);
+							index=this.index;
+							$(this).css({"background":"darkred"},{"color":"white"}).siblings().css({"background":"#fff"},{"color":"darkred"})
+							var html0 = template("tab0",{"list0":arr[this.index]});
+							var oBottom=document.getElementById("bottom");
+							oBottom.innerHTML=html0;
+							
+						}	
+					}
+					$(".golast").click(function(){
+							if(index>0){
+								index--;
+								$("#pagenum .num a").eq(index).css({"background":"darkred"},{"color":"white"}).siblings().css({"background":"#fff"},{"color":"darkred"})
+								var html0 = template("tab0",{"list0":arr[index]});
+								var oBottom=document.getElementById("bottom");
+								oBottom.innerHTML=html0;
+							}
+						})
+					$(".gonext").click(function(){
+							if(index<num-1){
+								index++;
+								$("#pagenum .num a").eq(index).css({"background":"darkred"},{"color":"white"}).siblings().css({"background":"#fff"},{"color":"darkred"})
+								var html0 = template("tab0",{"list0":arr[index]});
+								var oBottom=document.getElementById("bottom");
+								oBottom.innerHTML=html0;
+							}
+						})
+						
+				})
+				//---------------------------------------------右边栏数据
+				$.get("json/data66.json",{},function(data){
+					var html1 = template("tab1",{"list1":data});
+					var oRight_con=document.getElementById("right_con");
+						oRight_con.innerHTML=html1;	
+				})
+			})
+		</script>
+		
+		<!------------------------------------footer-->
+		<footer>
+			<div id="footer_top">
+				<div class="top">
+					<span>
+						<i style="background-position:0 0"></i>
+						<a href="#">正品保障</a>
+					</span>
+					<span>
+						<i style="background-position:0 -45px"></i>
+						<a href="#">国际物流护航</a>
+					</span>
+					<span>
+						<i style="background-position:0 -90px"></i>
+						<a href="#">严选优质商家</a>
+					</span>
+					<span>
+						<i style="background-position:0 -135px"></i>
+						<a href="#">支付安全便捷</a>
+					</span>
+				</div>
+			</div>
+			<div id="footer_bottom">
+				<div class="bottom">
+					<div class="a">
+						<ul>
+							<li><a href="#">购物指南</a></li>
+							<li><a href="#">关于嗨购帮</a></li>
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">购物流程</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">支付配送</a></li>
+							<li><a href="#">海关通关服务</a></li>
+							<li><a href="#">配送方式</a></li>
+							<li><a href="#">支付方式</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">服务条款</a></li>
+							<li><a href="#">退换货原则</a></li>
+							<li><a href="#">售后服务保证</a></li>
+							<li><a href="#">正品保证</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">尺码对照表</a></li>
+							<li><a href="#">文胸尺码对照表</a></li>
+							<li><a href="#">衬衫尺码对照表</a></li>
+							<li><a href="#">童装尺码对照表</a></li>
+							<li><a href="#">裤子尺码对照表</a></li>
+							<li><a href="#">鞋子尺码对照表</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">官方微博</a></li>
+							<li><img src="img/qr.png"></li>
+							<li>关注微博<span></span></li>
+						</ul>
+					</div>
+					<div class="b">
+						<p>© 2015-2016 嗨购帮 版权所有，并保留所有权利 粤ICP备15027144号-1</p>
+					</div>
+					<div class="c">
+						友情链接:
+						<a href="#">百度</a>|
+						<a href="#">新浪</a>|
+						<a href="#">快递查询</a>
+						
+					</div>
+					<div class="d">
+						<a href="#"><div class="d1" style="margin-left:300px"></div></a>
+						<a href="#"><div class="d2"></div></a>
+						<a href="#"><div class="d3"></div></a>
+						<a href="#"><div class="d4"></div></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/list.js">
+			
+			
+		</script>
+	</body>
+</html>

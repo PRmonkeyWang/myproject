@@ -1,0 +1,40 @@
+section{width:1190px;margin:0 auto;padding-bottom:20px;}
+			section h3{font:13px/50px "microsoft yahei"}
+			#con{width:1190px;min-height:200px;height:auto!important;height:200px;overflow:hidden;}
+				#con #left{width:800px;min-height:200px;height:auto!important;height:200px;float:left;}
+					#con #left #top{border:1px solid #CCCCCC;border-top:3px solid darkred;width:800px;min-height:90px;height:auto!important;height:90px;padding-top:10px;}
+					
+						#con #left #top .left{width:50px;float:left;}
+							#con #left #top .left p{font:15px/20px "microsoft yahei";font-weight:bold;text-indent: 15px;}
+						#con #left #top .right{width:750px;float:left;}
+							#con #left #top .right a{font:12px/20px "microsoft yahei";padding:0 15px;float:left;}
+						
+					#con #left #middle{width:800px;height:40px;margin-top:20px;border:1px solid #CCCCCC}
+						#con #left #middle a{float:left;border-right:1px solid #CCCCCC;font:13px/40px "microsoft yahei";padding:0 20px;}
+							#con #left #middle a:hover{background:darkred;color:#fff;}
+						#con #left #middle b{float:right;font:13px/40px "microsoft yahei"}
+						#con #left #middle b span{color:red;}
+					#con #left #bottom{width:800px;height:1800px;overflow:hidden;margin-top:20px;}
+						
+					#con #left #pagenum{width:800px;height:30px;}
+						#con #left #pagenum a{float:left;padding:5px 10px;border:1px solid #CCCCCC;margin-left:20px;cursor: pointer;}
+							#con #left #pagenum a:hover{background:darkred;color:#fff;}
+						#con #left #pagenum .num{float:left;}
+						
+						
+						#con #left #bottom ul{width:800px;}
+							#con #left #bottom ul li{width:200px;height:300px;float:left;}
+								#con #left #bottom ul li div{width:200px;height:170px;}
+								#con #left #bottom ul li p:nth-of-type(1){font:12px/20px "microsoft yahei";color:#999;height:40px;overflow:hidden;}
+								#con #left #bottom ul li p:nth-of-type(2){font:12px/30px "microsoft yahei";color:#CCCCCC;height:30px;overflow:hidden;}
+								#con #left #bottom ul li p:nth-of-type(3){font:15px/20px "microsoft yahei";color:#999;height:40px;overflow:hidden;}
+									#con #left #bottom ul li p:nth-of-type(3) b{font:20px/20px "microsoft yahei";color:red;}
+									#con #left #bottom ul li p:nth-of-type(3) span{font:15px/20px "microsoft yahei";float:right;text-decoration: line-through;}
+								
+				#con #right{width:300px;min-height:200px;height:auto!important;height:200px;float:right;border:1px solid #CCCCCC;border-top:3px solid darkred}
+					#con #right h4{width:300px;height:50px;background:#F0F0F0;font:25px/50px "microsoft yahei";padding:0 20px;box-sizing: border-box;}
+					#con #right .right_con{width:300px;min-height:100px;height:auto!important;height:100px;}
+					#con #right #right_con li{margin:10px 50px}
+						#con #right #right_con li div{width:200px;height:170px;}
+						#con #right #right_con li p:nth-of-type(1){font:12px/20px "microsoft yahei";color:#999;height:20px;overflow:hidden;text-align:center;}
+						#con #right #right_con li p:nth-of-type(2){font:12px/30px "microsoft yahei";color:#666;height:30px;overflow:hidden;text-align:center;}
