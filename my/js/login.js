@@ -49,7 +49,7 @@
 								var str=encodeURI($("#un").val());
 //								console.log(str);
 								setCookie("username",str,1);
-								setTimeout(function(){location.href="sy.html";},100)
+								setTimeout(function(){location.href="index.html";},100)
 								
 								
 //								var getShuju=getCookie("user");
